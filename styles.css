@@ -1,0 +1,89 @@
+#forecastList {
+    background-color: blue;
+    color: white;
+    width: 120px;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+}
+
+#forecastList1 {
+    background-color: blue;
+    color: white;
+    width: 120px;
+    border-radius: 10px;
+    margin-left: 200px;
+    position: absolute;
+    text-align: center;
+}
+
+#forecastList2 {
+    background-color: blue;
+    color: white;
+    width: 120px;
+    border-radius: 10px;
+    margin-left: 400px;
+    position: absolute;
+    text-align: center;
+}
+
+#forecastList3 {
+    background-color: blue;
+    color: white;
+    width: 120px;
+    border-radius: 10px;
+    margin-left: 600px;
+    position: absolute;
+    text-align: center;
+}
+
+#forecastList4 {
+    background-color: blue;
+    color: white;
+    width: 120px;
+    border-radius: 10px;
+    margin-left: 800px;
+    position: absolute;
+    text-align: center;
+}
+
+.jumbotron {
+    align-items: center;
+    margin-top: 200px;
+    margin-left: 500px;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    height: 60px;
+    margin-top: -30px;
+    widows: 100%;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 20px;
+}
+
+#currentWeather {
+    margin-top: -18%;
+    width: 60%;
+    position: absolute;
+    font-size: 20px;
+    border-style: outset;
+}
+
+body {
+    font: 16px Arial, sans-serif;
+}
+
+button {
+    background: #2196F3;
+    color: white;
+    font-size: 15px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+#searchbar{
+    background: #f1f1f1;
+}
