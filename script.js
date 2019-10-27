@@ -131,8 +131,8 @@ function test(value) {
     r.text(value);
     $("body").append(r);
 }
-$("#field").on("click", function (event) {
+/*$("#field").on("click", function (event) {
     event.preventDefault()
     alert("Hello");
     weatherResults(value); 
-})
+})*/
