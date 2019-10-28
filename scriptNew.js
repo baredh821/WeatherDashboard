@@ -147,6 +147,13 @@ function weatherResults(searchValue) {
 }
 $("#searchbutton").on("click", function(event) {
   event.preventDefault();
+  $("#currentWeather").show();
+  $("#fiveDay").show();
+  $("#forecastList").show();
+  $("#forecastList1").show();
+  $("#forecastList2").show();
+  $("#forecastList3").show();
+  $("#forecastList4").show();
   var value = $("#searchbar")
     .val()
     .trim();
@@ -157,6 +164,13 @@ $("#searchbutton").on("click", function(event) {
 $(document).on("click", ".searchCity", function(event) {
   event.preventDefault();
   var value1 = $(this).text();
+  $("#currentWeather").show();
+  $("#fiveDay").show();
+  $("#forecastList").show();
+  $("#forecastList1").show();
+  $("#forecastList2").show();
+  $("#forecastList3").show();
+  $("#forecastList4").show();
   console.log(value1);
   weatherResults(value1);
 });
