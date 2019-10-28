@@ -15,7 +15,7 @@ Weather Dashboard - This project covers a weather Dashboard which utilizes the A
 
 # Screenshots
 
-<img src = "screenshot1.png">
+<img src = "screenshot1.PNG">
 
 # Repo Details 
 https://github.com/baredh821/Homework6
