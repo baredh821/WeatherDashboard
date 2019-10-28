@@ -1,85 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-​<style>
+  ​<style>
     .forecastList {
-        background-color: blue;
-        color: white;
-        width: 100px;
-        border: none;
-        /* padding: 50px; */
-        /* margin: 20px; */
+      background-color: blue;
+      color: white;
+      width: 100px;
+      border: none;
+      /* padding: 50px; */
+      /* margin: 20px; */
     }
-</style>
+  </style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="./styles.css" />
-</head>
-​
+  </head>
+  ​
 
-<body>
-    ​<h1>Weather Dashboard</h1>
+  <body>
+    ​
+    <h1>Weather Dashboard</h1>
     <div>
-        <form>
-            <h2>Search for a City:</h2>
-            <input id="searchbar" type="text">
-            <!-- <button id="searchbutton">Search</button> -->
-            <button id="searchbutton" type="submit"><i class="fa fa-search"></i></button>
-            <ul class="list"></ul>
-        </form>
+      <form>
+        <h2>Search for a City:</h2>
+        <input id="searchbar" type="text" />
+        <!-- <button id="searchbutton">Search</button> -->
+        <button id="searchbutton" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+        <ul class="list"></ul>
+      </form>
     </div>
-    <div class="jumbotron">
-        <form id="currentWeather">
-            <h2 id="cityName"></h2>
-            <div id="temperature"></div><br>
-            <div id="humidity"></div><br>
-            <div id="windSpeed"></div>
-        </form>
-        <h2>5-Day Forecast</h2>
-        <form id="forecastList">
-            <h2 id="cityName1"></h2>
-            <div id="date1"></div><br>
-            <div class="icon1"></div>
-            <div id="temperature1"></div><br>
-            <div id="humidity1"></div><br>
-        </form>
-        <form id="forecastList1">
-            <h2 id="cityName2"></h2>
-            <div id="date2"></div><br>
-            <div class="icon2"></div>
-            <div id="temperature2"></div><br>
-            <div id="humidity2"></div><br>
-        </form>
-        <form id="forecastList2">
-            <h2 id="cityName3"></h2>
-            <div id="date3"></div><br>
-            <div class="icon3"></div>
-            <div id="temperature3"></div><br>
-            <div id="humidity3"></div><br>
-        </form>
-        <form id="forecastList3">
-            <h2 id="cityName4"></h2>
-            <div id="date4"></div><br>
-            <div class="icon4"></div>
-            <div id="temperature4"></div><br>
-            <div id="humidity4"></div><br>
-        </form>
-        <form id="forecastList4">
-            <h2 id="cityName5"></h2>
-            <div id="date5"></div><br>
-            <div class="icon5"></div>
-            <div id="temperature5"></div><br>
-            <div id="humidity5"></div><br>
-        </form>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="./script.js"></script>
-</body>
+    <div id="citiesDiv"></div>
 
+    <div class="jumbotron">
+      <form id="currentWeather">
+        <h2 id="cityName"></h2>
+        <div id="temperature"></div>
+        <br />
+        <div id="humidity"></div>
+        <br />
+        <div id="windSpeed"></div>
+      </form>
+      <h2>5-Day Forecast</h2>
+      <form id="forecastList">
+        <!-- <h2 id="cityName1"></h2> -->
+        <div id="date1"></div>
+        <br />
+        <div class="icon1"></div>
+        <div id="temperature1"></div>
+        <br />
+        <div id="humidity1"></div>
+        <br />
+      </form>
+      <form id="forecastList1">
+        <!-- <h2 id="cityName2"></h2> -->
+        <div id="date2"></div>
+        <br />
+        <div class="icon2"></div>
+        <div id="temperature2"></div>
+        <br />
+        <div id="humidity2"></div>
+        <br />
+      </form>
+      <form id="forecastList2">
+        <!-- <h2 id="cityName3"></h2> -->
+        <div id="date3"></div>
+        <br />
+        <div class="icon3"></div>
+        <div id="temperature3"></div>
+        <br />
+        <div id="humidity3"></div>
+        <br />
+      </form>
+      <form id="forecastList3">
+        <!-- <h2 id="cityName4"></h2> -->
+        <div id="date4"></div>
+        <br />
+        <div class="icon4"></div>
+        <div id="temperature4"></div>
+        <br />
+        <div id="humidity4"></div>
+        <br />
+      </form>
+      <form id="forecastList4">
+        <!-- <h2 id="cityName5"></h2> -->
+        <div id="date5"></div>
+        <br />
+        <div class="icon5"></div>
+        <div id="temperature5"></div>
+        <br />
+        <div id="humidity5"></div>
+        <br />
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="./scriptNew.js"></script>
+  </body>
 </html>

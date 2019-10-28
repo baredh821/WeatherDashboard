@@ -133,6 +133,13 @@ function test(value) {
     r.addClass("searchCity")
     r.text(value);
     $("body").append(r);
+    localStorage.setItem(r, value);
+    console.log(r, value);
+
+    for (var a=0; a < value ; a++) {
+        var valueStorage = localStorage.getItem(r + a);
+        $(".searchCity" + a).val(valueStorage);
+    }
 }
 $(document).on('click', '.searchCity', function (event) {
     event.preventDefault();

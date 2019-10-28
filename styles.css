@@ -65,7 +65,7 @@ h1 {
 }
 
 #currentWeather {
-    margin-top: -18%;
+    margin-top: -25%;
     width: 60%;
     position: absolute;
     font-size: 20px;
@@ -84,6 +84,16 @@ button {
     border-left: none;
     cursor: pointer;
 }
-#searchbar{
+
+#searchbar {
     background: #f1f1f1;
+}
+
+.searchCity {
+    background-color: grey;
+    border: 1px solid green;
+    color: white;
+    cursor: pointer;
+    width: 20%;
+    display: block;
 }
