@@ -2,7 +2,7 @@
     background-color: blue;
     color: white;
     width: 120px;
-    margin-top: -800px;
+    margin-top: -80px;
     border-radius: 10px;
     position: absolute;
     text-align: center;
@@ -104,6 +104,6 @@ button {
 }
 #fiveDay
 {
-    margin-top: -160px;
+    margin-top: -140px;
     position: absolute;
 }
