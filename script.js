@@ -3,11 +3,13 @@ var key = "bf3bbf0ea22e7e35ceaa37777ebf0b82"
 //call local storage here to retrieve data
 
 function weatherResults(searchValue) {
+    var proxy = "https://chriscastle.com/proxy/index.php?:proxy:";
     var searchURL = "http://api.openweathermap.org/data/2.5/weather?q=" + searchValue + "&appid=bf3bbf0ea22e7e35ceaa37777ebf0b82&units=imperial"
     console.log(searchURL)
     $.ajax({
 
-        url: searchURL,
+        url: proxy + searchURL,
+        dataType: 'json', 
         type: "GET"
     }).then(function (response) {
         console.log(response);
@@ -28,11 +30,13 @@ function weatherResults(searchValue) {
         $("#windSpeed").append("Wind Speed : " + windSpeed + " " + "MPH");
         localStorage.setItem(searchValue, response.name);
     })
+    var proxy = "https://chriscastle.com/proxy/index.php?:proxy:";
     var searchURL1 = "http://api.openweathermap.org/data/2.5/forecast?q=" + searchValue + "&appid=bf3bbf0ea22e7e35ceaa37777ebf0b82&units=imperial"
     console.log(searchURL1)
     $.ajax({
 
-        url: searchURL1,
+        url: proxy + searchURL1,
+        dataType: 'json', 
         type: "GET"
     }).then(function (response1) {
         console.log(response1)
@@ -125,9 +129,14 @@ $("#searchbutton").on("click", function (event) {
 function test(value) {
 
     console.log(value);
-    var r = $('<button>').attr({
-        id: "field"
-    });
+    var r = $('<button>');
+    r.addClass("searchCity")
     r.text(value);
     $("body").append(r);
 }
+$(document).on('click', '.searchCity', function (event) {
+    event.preventDefault();
+     var value1 = $(this).text();
+     console.log(value1);
+        weatherResults(value1);
+})
